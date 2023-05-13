@@ -1,0 +1,43 @@
+{% extends 'main/home.html' %}
+
+{% block title %}
+About us
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About us</span>
+            <h1>Best cars at affordable prices</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="{% static 'rentacar/img/911right.png' %}" alt="">
+            </div>
+            <div class="about-text">
+                <span></span>
+                <p>We are a long-term car rental company with good service. We provide the best service and delivery of the car to the airport or hotel. For companies we have a special offer for leasing for a long time, and for regular customers we have a system of discounts. We also provide car rental for a long time at a very good price, our company always has the newest cars. Contact us and we will help you with the choice and select for you the ideal conditions for renting a car for a short time or for a long rent.</p>
+                <a href="{% url 'email' %}" class="btn">Contact us</a>
+            </div>
+        </div>
+
+    </section>
+
+<!-- adress  -->
+
+<div class="office">
+    <a>Our offices</a>
+    <p><i class='bx bx-map' ></i>Prague, CZ</p>
+    <p>Vodičková 22, 110 00, Praha 1</p>
+
+    <p><i class='bx bx-map' ></i>London, GB</p>
+    <p>28 Red Lion St., London WC1R 4PS</p>
+
+    <p><i class='bx bx-map' ></i>Dubai, SAE</p>
+    <p>Oud Metha 42-1b, Dubai</p>
+</div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="{% static 'rentacar/js/main.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a car</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'rentacar/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+<!-- home and basic page  -->
+<header>
+    <a href="#" class="logo"><img src="{% static 'rentacar/img/newlogo.png' %}" alt=""></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'cars' %}">Cars</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'reviews' %}">Reviews</a></li>
+    </ul>
+    <div class="header-btn">
+        <a href="{% url 'message' %}" class="btn"><i class='bx bxs-message-rounded-detail'></i>message</a>
+    </div>
+</header>
+
+<div class="accept"><i class='bx bx-check'></i><br>
+    Your order is accepted! we will contact you soon, have a nice day :)
+</div>
+
+
+<script src="{% static 'rentacar/js/main.js' %}"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript" src="{% static 'rentacar/js/main.js' %}"></script>
+
+</body>
+</html>

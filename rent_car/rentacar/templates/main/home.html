@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a car</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'rentacar/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+<!-- home and basic page  -->
+<header>
+    <a href="#" class="logo"><img src="{% static 'rentacar/img/newlogo.png' %}" alt=""></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'cars' %}">Cars</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'reviews' %}">Reviews</a></li>
+        <li><a href="{% url 'email' %}">Contact us</a></li>
+    </ul>
+
+
+
+<!--    <div class="header-btn">-->
+<!--        <a href="{% url 'email' %}" class="btn"><i class='bx bxs-message-rounded-detail'></i> send message</a>-->
+<!--    </div>-->
+
+</header>
+
+<section class="home" id="home">
+    <img class="carhomeimg" src="{% static 'rentacar/img/panameraanew.png' %}">
+    <div class="text">
+        <h1><span>Looking</span> to<br>rent a car</h1>
+        <p>Best time for best cars</p>
+    </div>
+    {% comment %} <div class="form-container"> {% endcomment %}
+        <form action="" method="POST">
+
+<!--            <div class="input-box">-->
+
+<!--                <span>Location </span>-->
+<!--                <select type="search" name="" id="" value="" placeholder="Prague/London/Dubai">-->
+<!--                    <option value="Prague">Prague</option>-->
+<!--                    <option value="London">London</option>-->
+<!--                    <option value="Dubai">Dubai</option>-->
+<!--                </select>-->
+
+<!--            </div>-->
+
+<!--            <div class="input-box">-->
+<!--                <span>Car</span>-->
+<!--                <select type="search" name="" id="" value="" placeholder="Prague/London/Dubai">-->
+<!--                    <option value="Audi A1">Audi A1</option>-->
+<!--                    <option value="MB C-cabrio">MB C-cabrio</option>-->
+<!--                    <option value="MB E220d">MB E220d</option>-->
+<!--                    <option value="Porsche Macan S">Porsche Macan S</option>-->
+<!--                    <option value="Audi SQ8">Audi SQ8</option>-->
+<!--                    <option value="Porsche 911 Carerra S">Porsche 911 Carerra S</option>-->
+<!--                    <option value="Porsche 718 Cayman S">Porsche 718 Cayman S</option>-->
+<!--                    <option value="Porsche Panamera E-hybrid">Porsche Panamera E-hybrid</option>-->
+<!--                    <option value="Lamborghini Huracan">Lamborghini Huracan</option>-->
+<!--                    <option value="MB S500">MB S500</option>-->
+<!--                    <option value="BMW M5">BMW M5</option>-->
+<!--                    <option value="Audi S5 Cabrio">Audi S5 cabrio</option>-->
+<!--                </select>-->
+
+<!--            </div>-->
+
+<!--            <div class="input-box">-->
+<!--                <span>Pick-Up Date </span>-->
+<!--                <input type="date" name="" id="">-->
+<!--            </div>-->
+<!--            <div class="input-box">-->
+<!--                <span>Return Date </span>-->
+<!--                <input type="date" name="" id="">-->
+<!--            </div>-->
+            {% comment %} <div class="input-box">
+                <a href="{% url 'new_order' %}" class="btn"><i class='bx bx-car'></i> Rent now</a>
+            </div> {% endcomment %}
+
+        </form>
+        <div class="btn2">
+            <a href="{% url 'new_order' %}" class="btn"><i class='bx bx-car'></i> Rent now</a>
+        </div>
+
+        
+    {% comment %} </div> {% endcomment %}
+    {% comment %} <div class="btn2">
+        <a href="{% url 'new_order' %}" class="btn"><i class='bx bx-car'></i> Rent now</a>
+    </div> {% endcomment %}
+
+</section>
+<!--3 steps-->
+<section class="ride" id="ride">
+    <div class="heading">
+        <span>How its work?</span>
+        <h1>Rent with 3 easy steps</h1>
+    </div>
+    <div class="ride-container">
+        <div class="box">
+            <i class='bx bx-map bx-flashing' ></i>
+            <h2>1. Choose a location</h2>
+            <p>Choose in which city Prague, London or Dubai you need to rent a car
+                and we will prepare it especially for you.</p>
+        </div>
+
+        <div class="box">
+            <i class='bx bxs-calendar bx-tada' ></i>
+            <h2>2. Pick-Up</h2>
+            <p>Decide on the date when you would like to rent a car and the duration of the lease. Enjoy it with ours cars!</p>
+        </div>
+
+        <div class="box">
+            <i class='bx bx-calendar-star bx-burst' ></i>
+            <h2>3. Book a car</h2>
+            <p>Confirm your car reservation and we will contact you. After confirming the rental, we will prepare the
+                car for you</p>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript" src="{% static 'rentacar/js/main.js' %}"></script>
+{% block content %}{% endblock %}
+
+<section class="newsletter">
+    <form action="" method="post">
+        {% csrf_token %}
+    <h2>Best car for best time</h2>
+
+    </form>
+</section>
+
+<footer>
+    <div class="copyright">
+        <p>&#169; this page make by Ivan Tsybin - All right reserved</p>
+        <div class="social">
+            <a href="#"><i class='bx bx-envelope'> rentacar@rentacar.com</i></a>
+            <a href="#"><i class='bx bx-phone'></i> AE  +971 4 500 9999</a>
+            <a href="#"><i class='bx bx-phone'></i> GB  +44 20 9999 0000</a>
+            <a href="#"><i class='bx bx-phone'></i> CZ  +420 991 000 000</a>
+            <a href="https://www.facebook.com/profile.php?id=100088248163573"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/flagship_rentals/"><i class='bx bxl-instagram'></i></a>
+            <a><i class='bx bxl-whatsapp' ></i></a>
+            <a><i class='bx bxl-telegram' ></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

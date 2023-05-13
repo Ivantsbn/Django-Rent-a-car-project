@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a car</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'rentacar/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>{{ title }}</title>
+</head>
+<header>
+    <a href="#" class="logo"><img src="{% static 'rentacar/img/newlogo.png' %}" alt=""></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'cars' %}">Cars</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'reviews' %}">Reviews</a></li>
+        <li><a href="{% url 'email' %}">Contact us</a></li>
+    </ul>
+
+</header>
+<body>
+<br><br><br>
+<h1 class="messageh1">Contact us</h1>
+<div class="message-box">
+    <form action="{% url 'email' %}" method="POST">
+        {% csrf_token %}
+        <table class="send-container">
+            <div class="sendm">
+                <tr>
+                    <td>
+                        Your email:
+                    </td>
+                    <td>
+                        <input class="sendmail" type="email" name="toemail" placeholder="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea name="content" cols="30" rows="10" placeholder="write your quastion"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="btn-send" type="submit" name="Send" value="Send message">
+                    </td>
+                </tr>
+        </table>
+    </form>
+    
+</div>
+<footer>
+    <div class="copyright">
+        <p>&#169; this page make by Ivan Tsybin - All right reserved</p>
+        <div class="social">
+            <a href="#"><i class='bx bx-envelope'> rentacar@rentacar.com</i></a>
+            <a href="#"><i class='bx bx-phone'></i> AE +971 4 500 9999</a>
+            <a href="#"><i class='bx bx-phone'></i> GB +44 20 9999 0000</a>
+            <a href="#"><i class='bx bx-phone'></i> CZ +420 991 000 000</a>
+            <a href="https://www.facebook.com/profile.php?id=100088248163573"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/flagship_rentals/"><i class='bx bxl-instagram'></i></a>
+            <a><i class='bx bxl-whatsapp'></i></a>
+            <a><i class='bx bxl-telegram'></i></a>
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript" src="{% static 'rentacar/js/main.js' %}"></script>
+</body>
+</html>

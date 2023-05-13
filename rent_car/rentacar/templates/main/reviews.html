@@ -1,0 +1,86 @@
+{% extends 'main/home.html' %}
+
+{% block title %}
+Cars
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'rentacar/css/style.css' %}">
+<!-- reviews block  -->
+<section class="reviews" id="reviews">
+    <div class="heading">
+        <span>Reviews</span>
+        <h1>Reviews of our customers</h1>
+    </div>
+
+    <div class="reviews-container">
+        <div class="box">
+            <div class="rev-img">
+                <img src="{% static 'rentacar/img/man1.jpg' %}" alt="">
+            </div>
+            <h2>Mike</h2>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+            </div>
+            <p>Very reasonable prices, they brought the car to the hotel and all the necessary documents were issued
+                online.</p>
+        </div>
+        <div class="box">
+            <div class="rev-img">
+                <img src="{% static 'rentacar/img/girl1.jpg' %}" alt="">
+            </div>
+            <h2>Anna</h2>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>I really liked the car that I rented, good prices and a convenient rental system. I will use this company
+                again.</p>
+        </div>
+        <div class="box">
+            <div class="rev-img">
+                <img src="{% static 'rentacar/img/man2.jpg' %}" alt="">
+            </div>
+            <h2>Patrick</h2>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>Very good company, fast and efficient. brought the car to the airport and met us there, thank you</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- adresa  -->
+
+<div class="office">
+    <a>Our offices</a>
+    <p><i class='bx bx-map'></i>Prague, CZ</p>
+    <p>Vodičková 22, 110 00, Praha 1</p>
+
+    <p><i class='bx bx-map'></i>London, GB</p>
+    <p>28 Red Lion St., London WC1R 4PS</p>
+
+    <p><i class='bx bx-map'></i>Dubai, SAE</p>
+    <p>Oud Metha 42-1b, Dubai</p>
+
+</div>
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript" src="{% static 'rentacar/js/main.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'main/home.html' %}
+
+{% block title %}
+Cars
+{% endblock %}
+
+{% block content %}
+
+<section class="services" id="services">
+    <div class="heading">
+        <span>Best cars for rent</span>
+        <h1>Enjoy driving with our cars</h1>
+    </div>
+    <div class="services-container">
+
+        {% for item in top_cars %}
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="{{ item.image.url }}">
+                </div>
+                <h3>{{ item.name }}</h3>
+                <h4>{{ item.power }} | Automat | {{ item.fuel }} | {{ item.capacity }} person</h4>
+                <h2>from {{ item.price }}$<span>/day</span></h2>
+                <a href="{% url 'new_order' %}" class="btn">Rent now</a>
+            </div>
+        {% endfor %}
+        <div class="box">
+    </div>
+</section>
+
+<!-- adresa  -->
+
+<div class="office">
+    <a>Our offices</a>
+    <p><i class='bx bx-map'></i>Prague, CZ</p>
+    <p>Vodičková 22, 110 00, Praha 1</p>
+
+    <p><i class='bx bx-map'></i>London, GB</p>
+    <p>28 Red Lion St., London WC1R 4PS</p>
+
+    <p><i class='bx bx-map'></i>Dubai, SAE</p>
+    <p>Oud Metha 42-1b, Dubai</p>
+
+</div>
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+</body>
+</html>
+{% endblock %}
